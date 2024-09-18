@@ -13,7 +13,7 @@ public class main {
 		String [] menu= {"Registrarse", "Prestamo","Ver prestamos", "Devolucion","Ver devoluciones", "Ver estado", "Salir"};
 		int opcion=0;
 		do {
-			opcion=JOptionPane.showOptionDialog(null, "elija una opcion", "menu", JOptionPane.DEFAULT_OPTION, 0, new ImageIcon(main.class.getResource("/img/Libreria.jpg")), menu, menu[0]);
+			opcion=JOptionPane.showOptionDialog(null, "Elija una opcion", "Menu", JOptionPane.DEFAULT_OPTION, 0, new ImageIcon(main.class.getResource("/img/Libreria.jpg")), menu, menu[0]);
 			
 			switch (opcion) {
 			case 0:

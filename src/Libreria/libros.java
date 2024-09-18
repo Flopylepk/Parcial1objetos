@@ -94,7 +94,7 @@ public class libros {
 					this.libro1=false;
 					this.prestamo=this.prestamo+"El Quijote fue rentado por: "+this.cliente+ " el: "+ this.fecha+"\n";
 				}else {
-					JOptionPane.showMessageDialog(null, "Lo sentimos este libro no esta disponible");
+					JOptionPane.showMessageDialog(null, "Lo sentimos este libro ya fue rentado por usted");
 				}
 				break;
 			case 1:
@@ -102,7 +102,7 @@ public class libros {
 					this.libro2=false;
 					this.prestamo=this.prestamo+"Percy Jackson fue rentado por: "+this.cliente+ " el: "+ this.fecha+"\n";
 				}else {
-					JOptionPane.showMessageDialog(null, "Lo sentimos este libro no esta disponible");
+					JOptionPane.showMessageDialog(null, "Lo sentimos este libro ya fue rentado por usted");
 					
 				}
 				
@@ -112,7 +112,7 @@ public class libros {
 					this.libro3=false;
 					this.prestamo=this.prestamo+"Dracula fue rentado por: "+this.cliente+ " el: "+ this.fecha+"\n";
 				}else {
-					JOptionPane.showMessageDialog(null, "Lo sentimos este libro no esta disponible");
+					JOptionPane.showMessageDialog(null, "Lo sentimos este libro ya fue rentado por usted");
 				}
 				break;
 			}
@@ -137,7 +137,7 @@ public class libros {
 						this.libro1=true;
 						this.devolucion=this.devolucion+"El Quijote fue debuelto por: "+this.cliente+ " el: "+ this.fecha +"\n";
 					}else {
-						JOptionPane.showMessageDialog(null, "Lo sentimos este libro no fue rentado");
+						JOptionPane.showMessageDialog(null, "Lo sentimos este libro no fue rentado por usted");
 					}
 					break;
 				case 1:
@@ -145,7 +145,7 @@ public class libros {
 						this.libro2=true;
 						this.devolucion=this.devolucion+"Percy Jackson fue debuelto por: "+this.cliente+ " el: "+ this.fecha+"\n";
 					}else {
-						JOptionPane.showMessageDialog(null, "Lo sentimos este libro no fue rentado");
+						JOptionPane.showMessageDialog(null, "Lo sentimos este libro no fue rentado por usted");
 						
 					}
 					
@@ -155,7 +155,7 @@ public class libros {
 						this.libro3=true;
 						this.devolucion=this.devolucion+"Dracula fue debuelto por: "+this.cliente+ " el: "+ this.fecha+"\n";
 					}else {
-						JOptionPane.showMessageDialog(null, "Lo sentimos este libro no fue rentado");
+						JOptionPane.showMessageDialog(null, "Lo sentimos este libro no fue rentado por usted");
 					}
 					break;
 				
