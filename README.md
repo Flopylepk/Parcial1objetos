@@ -1,2 +1,1 @@
-<h1>Diagrama de la veterinaria</h1>
-<img src="img/Veterinariadiagrama">
+<p>Los diagramas se encuentran en al carpeta de img del código</p>
