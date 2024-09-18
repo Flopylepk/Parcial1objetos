@@ -8,9 +8,10 @@ import javax.swing.JOptionPane;
 public class main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// 
+		
 		Mascotas peludo=new Mascotas();
-		String [] menu= {"Refustrar mascota","Ver el registro", "Registrar su salud","revisar su salud", "Revisar el tratamiento", "salir" };
+		String [] menu= {"Registrar mascota","Ver el registro", "Registrar su salud","Revisar su salud", "Revisar el tratamiento", "Salir" };
 		int opcion=0;
 		int valor=0;
 		String enfermedad="";
@@ -69,8 +70,10 @@ public class main {
 			}
 			
 			
-		} while (opcion!=4);
+		} while (opcion!=5);
 	}
+	
+	//FUNCIONES
 	
 	public static int validarNumeros(String mensaje) {
 		boolean flag ;
