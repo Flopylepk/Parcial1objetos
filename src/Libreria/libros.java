@@ -79,7 +79,7 @@ public class libros {
 		case 0:
 			if (this.libro1==true) {
 				this.libro1=false;
-				this.prestamo=this.prestamo+"le quijote fue rentado por: "+this.cliente+ " el: "+ this.fecha;
+				this.prestamo=this.prestamo+"le quijote fue rentado por: "+this.cliente+ " el: "+ this.fecha+"\n";
 			}else {
 				JOptionPane.showMessageDialog(null, "lo sentimos este libro no esta disponible");
 			}
@@ -87,7 +87,7 @@ public class libros {
 		case 1:
 			if (this.libro2==true) {
 				this.libro2=false;
-				this.prestamo=this.prestamo+"Percy Jackson fue rentado por: "+this.cliente+ " el: "+ this.fecha;
+				this.prestamo=this.prestamo+"Percy Jackson fue rentado por: "+this.cliente+ " el: "+ this.fecha+"\n";
 			}else {
 				JOptionPane.showMessageDialog(null, "lo sentimos este libro no esta disponible");
 				
@@ -97,7 +97,7 @@ public class libros {
 		case 2:
 			if (this.libro3==true) {
 				this.libro3=false;
-				this.prestamo=this.prestamo+"Dracula fue rentado por: "+this.cliente+ " el: "+ this.fecha;
+				this.prestamo=this.prestamo+"Dracula fue rentado por: "+this.cliente+ " el: "+ this.fecha+"\n";
 			}else {
 				JOptionPane.showMessageDialog(null, "lo sentimos este libro no esta disponible");
 			}
@@ -118,7 +118,7 @@ public class libros {
 			case 0:
 				if (this.libro1==false) {
 					this.libro1=true;
-					this.devolucion=this.devolucion+"le quijote fue debuelto por: "+this.cliente+ " el: "+ this.fecha;
+					this.devolucion=this.devolucion+"le quijote fue debuelto por: "+this.cliente+ " el: "+ this.fecha +"\n";
 				}else {
 					JOptionPane.showMessageDialog(null, "lo sentimos este libro no fue rentado");
 				}
@@ -126,7 +126,7 @@ public class libros {
 			case 1:
 				if (this.libro2==false) {
 					this.libro2=true;
-					this.devolucion=this.devolucion+"Percy Jackson fue debuelto por: "+this.cliente+ " el: "+ this.fecha;
+					this.devolucion=this.devolucion+"Percy Jackson fue debuelto por: "+this.cliente+ " el: "+ this.fecha+"\n";
 				}else {
 					JOptionPane.showMessageDialog(null, "lo sentimos este libro no fue rentado");
 					
@@ -136,7 +136,7 @@ public class libros {
 			case 2:
 				if (this.libro3==false) {
 					this.libro3=true;
-					this.devolucion=this.devolucion+"Dracula fue debuelto por: "+this.cliente+ " el: "+ this.fecha;
+					this.devolucion=this.devolucion+"Dracula fue debuelto por: "+this.cliente+ " el: "+ this.fecha+"\n";
 				}else {
 					JOptionPane.showMessageDialog(null, "lo sentimos este libro no fue rentado");
 				}
@@ -149,20 +149,34 @@ public class libros {
 			return this.estado;	
 	}
 		public void setEstado() {
-			if (libro1) {
-				this.estado=this.estado+"El quijote esta disponible";
-			} else {
-				this.estado=this.estado+"El quijote no esta disponible";
-			}
-			if (libro2) {
-				this.estado=this.estado+"Percy jackson esta disponible";
-			} else {
-				this.estado=this.estado+"Percy Jackson no esta disponible";
-			}
-			if (libro3) {
-				this.estado=this.estado+"Dracula esta disponible";
-			} else {
-				this.estado=this.estado+"Dracula no esta disponible";
+			String [] opciones= {"El quijote", "Percy Jackson", "Dracula"};
+			int opcion=JOptionPane.showOptionDialog(null, "Elija que libro quiere ver el estado", "libros", 0, 0, null, opciones, opciones[0]);
+			switch (opcion) {
+			case 0:
+				if (libro1) {
+					this.estado="El quijote esta disponible";
+				}else {
+					this.estado="El quijote no esta disponible";
+				}
+				break;
+			case 1:
+				if (libro2) {
+					this.estado="Percy Jackson esta disponible";
+				}else {
+					this.estado="Percy Jackson no esta disponible";
+					
+				}
+				
+				break;
+			case 2:
+				if (libro3) {
+					this.estado="Dracula esta disponible";
+				}else {
+					this.estado="Dracula no esta disponible";
+					
+				}
+				break;
+			
 			}
 		}	
 		
