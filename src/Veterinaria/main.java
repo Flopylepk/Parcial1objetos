@@ -43,7 +43,7 @@ public class main {
 					enfermedad=validarCaracteres("ingrese algun problema que tenga su animalito");
 					valor=validarNumeros("ingrese que tan grave es la enfermedad, del 1 al 100");
 					peludo.setSalud(enfermedad, valor);
-					peludo.setTratamiento(valor);
+					peludo.setTratamiento(valor,enfermedad);
 				}
 				break;
 			case 3:

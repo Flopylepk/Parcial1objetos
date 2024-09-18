@@ -50,11 +50,11 @@ import javax.swing.JOptionPane;
 	public String getTratamiento(){
 		return this.tratamiento;
 		}
-	public void setTratamiento(int a) {
+	public void setTratamiento(int a, String b) {
 		if (a<50) {
-			this.tratamiento=this.salud+" (no nesesita tratamiento)"+"\n";
+			this.tratamiento=this.tratamiento+"Enfermedad: "+b+" (no nesesita tratamiento)"+"\n";
 		} else {
-			this.tratamiento=this.salud+" (nesesita tratamiento, vaya a la clinica veterinaria)"+"\n";
+			this.tratamiento=this.tratamiento+"Enfermedad: "+b+" (nesesita tratamiento, vaya a la clinica veterinaria)"+"\n";
 		}
 		}
 
