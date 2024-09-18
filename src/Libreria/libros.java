@@ -6,6 +6,7 @@ import javax.swing.JOptionPane;
 
 public class libros {
 
+	//ATRIBUTOS
 	private String cliente;
 	private boolean libro1;
 	private boolean libro2;
@@ -15,6 +16,8 @@ public class libros {
 	private String devolucion;
 	private LocalDate fecha;
 	
+	
+	//CONSTRUCTORES
 	public libros (String a, boolean b, boolean c, boolean d, String e, String f, String g, LocalDate h) {
 		this.cliente=a;
 		this.libro1=b;
@@ -37,14 +40,18 @@ public class libros {
 		this.fecha=LocalDate.now();
 	}
 	
+	//GET Y SET CLIENTE
+	
 	public String getCliente(){
 		return this.cliente;
 			}
 	
 	public void setCliente() {
 		String nombre=validarCaracteres("ingrese el nombre del cliente");
+		this.cliente=nombre;
 	}
 	
+	//GET Y SET LIBRO1
 	public boolean getLibro1() {
 		return this.libro1;
 	}
@@ -52,6 +59,8 @@ public class libros {
 		this.libro1=a;
 	}
 	
+	
+	//GET Y SET LIBRO2
 	public boolean getLibro2() {
 		return this.libro2;
 	}
@@ -59,6 +68,8 @@ public class libros {
 		this.libro2=a;
 	}
 	
+	
+	//GET Y SET LIBRO3
 	public boolean getLibro3() {
 		return this.libro3;
 	}
@@ -66,6 +77,8 @@ public class libros {
 		this.libro3=a;
 	}
 	
+	
+	//GET Y SET PRESTAMO
 	public String getPrestamo() {
 		return this.prestamo;
 	}
@@ -105,6 +118,8 @@ public class libros {
 		}
 		}
 	
+	
+	//GET Y SET DEVOLUCION
 		public String getDevolucion() {
 			return this.devolucion;
 		}
@@ -145,6 +160,8 @@ public class libros {
 			}
 			
 			}
+		
+		//GET Y SET ESTADO
 		public String getEstado() {
 			return this.estado;	
 	}
@@ -180,6 +197,8 @@ public class libros {
 			}
 		}	
 		
+		
+		//GET Y SET FECHA
 		public LocalDate getFecha() {
 			return this.fecha;
 		}
@@ -192,26 +211,6 @@ public class libros {
 	
 	
 	//VALIDACIONES
-		public static int validarNumeros(String mensaje) {
-			boolean flag ;
-			String num ="" ;
-			do {
-				flag =true;
-				num = JOptionPane.showInputDialog(mensaje);
-				while (num.isEmpty()) {
-					num = JOptionPane.showInputDialog(mensaje);
-				}
-				for (int i = 0; i < num.length(); i++) {
-					if (!Character.isDigit(num.charAt(i))) {
-						flag = false;
-						break;
-					}
-				}
-			} while (!flag);
-		
-			return Integer.parseInt(num);
-		}
-
 		public String validarCaracteres(String mensaeje) {
 			String palabra = "";
 			while (palabra.equals("")) {

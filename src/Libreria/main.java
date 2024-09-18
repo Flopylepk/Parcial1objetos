@@ -24,10 +24,18 @@ public class main {
 				}
 				break;
 			case 1:
-				
+				if (primero.getCliente()=="") {
+					JOptionPane.showMessageDialog(null, "Usted debe registrarse primero");
+				} else {
+					primero.setPrestamo();
+				}
 				break;
 			case 2:
-				
+				if (primero.getPrestamo()=="") {
+					JOptionPane.showMessageDialog(null, "Usted debe realizar un prestamos primero");
+				} else {
+					JOptionPane.showMessageDialog(null, primero.getPrestamo());
+				}
 				break;
 			case 3:
 				if (primero.getCliente()=="") {
@@ -44,7 +52,7 @@ public class main {
 				}
 				break;
 			case 5:
-				JOptionPane.showMessageDialog(null, primero.getEstado());
+				primero.setEstado();
 				break;
 			case 6:
 				JOptionPane.showMessageDialog(null, "ok nos vemos otro dia");
