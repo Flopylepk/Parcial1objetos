@@ -53,6 +53,7 @@ public class main {
 				break;
 			case 5:
 				primero.setEstado();
+				JOptionPane.showMessageDialog(null, primero.getEstado());
 				break;
 			case 6:
 				JOptionPane.showMessageDialog(null, "ok nos vemos otro dia");
