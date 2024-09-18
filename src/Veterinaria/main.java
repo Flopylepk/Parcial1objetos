@@ -31,7 +31,7 @@ public class main {
 					JOptionPane.showMessageDialog(null, "usted no registro a la mascora");
 					
 				}else {
-					peludo.getMascota();
+					JOptionPane.showMessageDialog(null, peludo.getMascota());
 				}
 				break;
 			case 2:
@@ -42,12 +42,23 @@ public class main {
 					enfermedad=validarCaracteres("ingrese algun problema que tenga su animalito");
 					valor=validarNumeros("ingrese que tan grave es la enfermedad, del 1 al 100");
 					peludo.setSalud(enfermedad, valor);
+					peludo.setTratamiento(valor);
 				}
 				break;
 			case 3:
+				if (peludo.getSalud()=="") {
+					JOptionPane.showMessageDialog(null, "usted no registro la salud de la mascota");
+				} else {
+					JOptionPane.showMessageDialog(null, peludo.getSalud());
+				}
 				
 				break;
 			case 4:
+				if (peludo.getSalud()=="") {
+					JOptionPane.showMessageDialog(null, "usted no registro la salud de la mascota");
+				} else {
+					JOptionPane.showMessageDialog(null, peludo.getTratamiento());
+				}
 				
 				break;
 			case 5:
