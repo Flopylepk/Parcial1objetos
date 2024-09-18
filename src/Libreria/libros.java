@@ -47,7 +47,7 @@ public class libros {
 			}
 	
 	public void setCliente() {
-		String nombre=validarCaracteres("ingrese el nombre del cliente");
+		String nombre=validarCaracteres("Ingrese el nombre del cliente");
 		this.cliente=nombre;
 	}
 	
@@ -84,38 +84,40 @@ public class libros {
 	}
 	public void setPrestamo() {
 		if (this.libro1==false && this.libro2==false && this.libro3==false) {
-			JOptionPane.showMessageDialog(null, "lo sentimos no tenemos libros disponibles en este momento");
-		}
-		String [] opciones= {"El quijote", "Percy Jackson", "Dracula"};
-		int opcion=JOptionPane.showOptionDialog(null, "Elija que libro quiere qie le prestemos", "libros", 0, 0, null, opciones, opciones[0]);
-		switch (opcion) {
-		case 0:
-			if (this.libro1==true) {
-				this.libro1=false;
-				this.prestamo=this.prestamo+"le quijote fue rentado por: "+this.cliente+ " el: "+ this.fecha+"\n";
-			}else {
-				JOptionPane.showMessageDialog(null, "lo sentimos este libro no esta disponible");
-			}
-			break;
-		case 1:
-			if (this.libro2==true) {
-				this.libro2=false;
-				this.prestamo=this.prestamo+"Percy Jackson fue rentado por: "+this.cliente+ " el: "+ this.fecha+"\n";
-			}else {
-				JOptionPane.showMessageDialog(null, "lo sentimos este libro no esta disponible");
+			JOptionPane.showMessageDialog(null, "Lo sentimos no tenemos libros disponibles en este momento");
+		}else {
+			String [] opciones= {"El Quijote", "Percy Jackson", "Dracula"};
+			int opcion=JOptionPane.showOptionDialog(null, "Elija que libro quiere que le prestemos", "Libros", 0, 0, null, opciones, opciones[0]);
+			switch (opcion) {
+			case 0:
+				if (this.libro1==true) {
+					this.libro1=false;
+					this.prestamo=this.prestamo+"El Quijote fue rentado por: "+this.cliente+ " el: "+ this.fecha+"\n";
+				}else {
+					JOptionPane.showMessageDialog(null, "Lo sentimos este libro no esta disponible");
+				}
+				break;
+			case 1:
+				if (this.libro2==true) {
+					this.libro2=false;
+					this.prestamo=this.prestamo+"Percy Jackson fue rentado por: "+this.cliente+ " el: "+ this.fecha+"\n";
+				}else {
+					JOptionPane.showMessageDialog(null, "Lo sentimos este libro no esta disponible");
+					
+				}
 				
+				break;
+			case 2:
+				if (this.libro3==true) {
+					this.libro3=false;
+					this.prestamo=this.prestamo+"Dracula fue rentado por: "+this.cliente+ " el: "+ this.fecha+"\n";
+				}else {
+					JOptionPane.showMessageDialog(null, "Lo sentimos este libro no esta disponible");
+				}
+				break;
 			}
-			
-			break;
-		case 2:
-			if (this.libro3==true) {
-				this.libro3=false;
-				this.prestamo=this.prestamo+"Dracula fue rentado por: "+this.cliente+ " el: "+ this.fecha+"\n";
-			}else {
-				JOptionPane.showMessageDialog(null, "lo sentimos este libro no esta disponible");
-			}
-			break;
 		}
+		
 		}
 	
 	
@@ -125,39 +127,41 @@ public class libros {
 		}
 		public void setDevolucion() {
 			if (this.libro1==true && this.libro2==true && this.libro3==true) {
-				JOptionPane.showMessageDialog(null, "lo sentimos todos los libros ya fueron debueltos");
-			}
-			String [] opciones= {"El quijote", "Percy Jackson", "Dracula"};
-			int opcion=JOptionPane.showOptionDialog(null, "Elija que libro quiere quiere", "libros", 0, 0, null, opciones, opciones[0]);
-			switch (opcion) {
-			case 0:
-				if (this.libro1==false) {
-					this.libro1=true;
-					this.devolucion=this.devolucion+"le quijote fue debuelto por: "+this.cliente+ " el: "+ this.fecha +"\n";
-				}else {
-					JOptionPane.showMessageDialog(null, "lo sentimos este libro no fue rentado");
-				}
-				break;
-			case 1:
-				if (this.libro2==false) {
-					this.libro2=true;
-					this.devolucion=this.devolucion+"Percy Jackson fue debuelto por: "+this.cliente+ " el: "+ this.fecha+"\n";
-				}else {
-					JOptionPane.showMessageDialog(null, "lo sentimos este libro no fue rentado");
+				JOptionPane.showMessageDialog(null, "Lo sentimos todos los libros ya fueron debueltos");
+			}else {
+				String [] opciones= {"El Quijote", "Percy Jackson", "Dracula"};
+				int opcion=JOptionPane.showOptionDialog(null, "Elija que libro quiere debolver", "libros", 0, 0, null, opciones, opciones[0]);
+				switch (opcion) {
+				case 0:
+					if (this.libro1==false) {
+						this.libro1=true;
+						this.devolucion=this.devolucion+"El Quijote fue debuelto por: "+this.cliente+ " el: "+ this.fecha +"\n";
+					}else {
+						JOptionPane.showMessageDialog(null, "Lo sentimos este libro no fue rentado");
+					}
+					break;
+				case 1:
+					if (this.libro2==false) {
+						this.libro2=true;
+						this.devolucion=this.devolucion+"Percy Jackson fue debuelto por: "+this.cliente+ " el: "+ this.fecha+"\n";
+					}else {
+						JOptionPane.showMessageDialog(null, "Lo sentimos este libro no fue rentado");
+						
+					}
 					
-				}
+					break;
+				case 2:
+					if (this.libro3==false) {
+						this.libro3=true;
+						this.devolucion=this.devolucion+"Dracula fue debuelto por: "+this.cliente+ " el: "+ this.fecha+"\n";
+					}else {
+						JOptionPane.showMessageDialog(null, "Lo sentimos este libro no fue rentado");
+					}
+					break;
 				
-				break;
-			case 2:
-				if (this.libro3==false) {
-					this.libro3=true;
-					this.devolucion=this.devolucion+"Dracula fue debuelto por: "+this.cliente+ " el: "+ this.fecha+"\n";
-				}else {
-					JOptionPane.showMessageDialog(null, "lo sentimos este libro no fue rentado");
 				}
-				break;
-			
 			}
+			
 			
 			}
 		
@@ -166,7 +170,7 @@ public class libros {
 			return this.estado;	
 	}
 		public void setEstado() {
-			String [] opciones= {"El quijote", "Percy Jackson", "Dracula"};
+			String [] opciones= {"El Quijote", "Percy Jackson", "Dracula"};
 			int opcion=JOptionPane.showOptionDialog(null, "Elija que libro quiere ver el estado", "libros", 0, 0, null, opciones, opciones[0]);
 			switch (opcion) {
 			case 0:
