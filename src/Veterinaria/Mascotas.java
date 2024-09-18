@@ -43,7 +43,7 @@ import javax.swing.JOptionPane;
 		return this.salud;
 		}
 	public void setSalud(String a, int b) {
-		this.salud=this.salud+"Enfermedad: "+a+" Gravedad: "+b;
+		this.salud=this.salud+"Enfermedad: "+a+" Gravedad: "+b+"\n";
 		}
 
 	//GETYSET TRATAMIENTO
@@ -52,9 +52,9 @@ import javax.swing.JOptionPane;
 		}
 	public void setTratamiento(int a) {
 		if (a<50) {
-			this.tratamiento=this.salud+" (no nesesita tratamiento)";
+			this.tratamiento=this.salud+" (no nesesita tratamiento)"+"\n";
 		} else {
-			this.tratamiento=this.salud+" (nesesita tratamiento, vaya a la clinica veterinaria)";
+			this.tratamiento=this.salud+" (nesesita tratamiento, vaya a la clinica veterinaria)"+"\n";
 		}
 		}
 
