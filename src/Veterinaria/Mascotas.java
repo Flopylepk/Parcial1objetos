@@ -36,10 +36,8 @@ public void setMascota() {
 public String getSalud(){
 	return this.salud;
 }
-public void setSalud(int a) {
-	String enfermedad=validarCaracteres("ingrese algun problema que tenga su animalito");
-	a=validarNumeros("ingrese que tan grave es la enfermedad, del 1 al 100");
-	this.salud=this.salud+"Enfermedad: "+enfermedad+" gravedad: "+a;
+public void setSalud(String a, int b) {
+	this.salud=this.salud+"Enfermedad: "+a+" gravedad: "+b;
 }
 public String getTratamiento(){
 	return this.tratamiento;
