@@ -79,10 +79,10 @@ import javax.swing.JOptionPane;
 		return Integer.parseInt(num);
 	}
 
-	public String validarCaracteres(String mensaej) {
+	public String validarCaracteres(String mensaeje) {
 		String palabra = "";
 		while (palabra.equals("")) {
-			palabra = JOptionPane.showInputDialog(mensaej);
+			palabra = JOptionPane.showInputDialog(mensaeje);
 		}
 		return palabra;
 	}
