@@ -13,8 +13,6 @@ public class main {
 		Mascota peludo=new Mascota();
 		String [] menu= {"Sacar turno","Ver el registro", "Registrar su salud","Revisar su salud", "Revisar el tratamiento", "Salir" };
 		int opcion=0;
-		int valor=0;
-		String enfermedad="";
 		do {
 			opcion=JOptionPane.showOptionDialog(null, "Elija una opcion", "menu", JOptionPane.DEFAULT_OPTION, 0, new ImageIcon(main.class.getResource("/img/veterinaria.png")), menu, menu[0]);
 			
@@ -40,10 +38,8 @@ public class main {
 					JOptionPane.showMessageDialog(null, "usted no registro a la mascora");
 					
 				}else {
-					enfermedad=validarCaracteres("ingrese algun problema que tenga su animalito");
-					valor=validarNumeros("ingrese que tan grave es la enfermedad, del 1 al 100");
-					peludo.setSalud(enfermedad, valor);
-					peludo.setTratamiento(valor,enfermedad);
+					peludo.setSalud();
+					peludo.setTratamiento();
 				}
 				break;
 			case 3:

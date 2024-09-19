@@ -11,6 +11,8 @@ import javax.swing.JOptionPane;
 			private String salud;
 			private String tratamiento;
 			private LocalDate fecha;
+			private int valor;
+			private String enfermedad;
 			
 	//CONSTRUCTORES
 	public  Mascota (String a, String b, String c, LocalDate d) {
@@ -48,14 +50,16 @@ import javax.swing.JOptionPane;
 	public String getSalud(){
 		return this.salud;
 		}
-	public void setSalud(String a, int b) {
+	public void setSalud() {
 		LocalDate hoy= LocalDate.now();
-		if (hoy.equals(fecha)) {
-			this.salud=this.salud+"Enfermedad: "+a+" Gravedad: "+b+"\n";
+		if (fecha.equals(hoy)) {
+			this.enfermedad=validarCaracteres("ingrese la enfermedad del animalito");
+			this.valor=validarNumeros("ingrese la gravedad de la enfermedad del 1 al 100");
+			this.salud=this.salud+"Enfermedad: "+this.enfermedad+" Gravedad: "+this.valor+"\n";
 		} else if (hoy.isBefore(fecha)) {
 			JOptionPane.showMessageDialog(null, "usted tiene que esperar a que sea el turno: "+fecha);
 		} else {
-			JOptionPane.showMessageDialog(null, "usted se paso de fecha, tiene que sacar otro turno, valla a resepcion");
+			JOptionPane.showMessageDialog(null, "usted se paso de fecha, tiene que sacar otro turno, valla a resepcion, tiene que tocar salir");
 		}
 
 		}
@@ -66,11 +70,11 @@ import javax.swing.JOptionPane;
 	public String getTratamiento(){
 		return this.tratamiento;
 		}
-	public void setTratamiento(int a, String b) {
-		if (a<50) {
-			this.tratamiento=this.tratamiento+"Enfermedad: "+b+" (no nesesita tratamiento)"+"\n";
+	public void setTratamiento() {
+		if (this.valor<50) {
+			this.tratamiento=this.tratamiento+"Enfermedad: "+this.enfermedad+" (no nesesita tratamiento)"+"\n";
 		} else {
-			this.tratamiento=this.tratamiento+"Enfermedad: "+b+" (nesesita tratamiento, vaya a la clinica veterinaria)"+"\n";
+			this.tratamiento=this.tratamiento+"Enfermedad: "+this.enfermedad+" (nesesita tratamiento, vaya a la clinica veterinaria)"+"\n";
 		}
 		}
 	
@@ -81,6 +85,22 @@ import javax.swing.JOptionPane;
 	
 	public void setFecha(LocalDate a) {
 		this.fecha=a;
+	}
+	
+	//GETYSET VALOR
+	public int getValor() {
+		return this.valor;
+	}
+	public void setValor(int a) {
+		this.valor=a;
+	}
+	
+	//GETYSET ENFERMEDAD
+	public String getEnfermedad() {
+		return this.enfermedad;
+	}
+	public void setEnfermedad(String a) {
+		this.enfermedad=a;
 	}
 
 	//VALIDACIONES
