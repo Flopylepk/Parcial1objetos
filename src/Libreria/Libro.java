@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 import javax.swing.JOptionPane;
 
-public class libros {
+public class Libro {
 
 	//ATRIBUTOS
 	private String cliente;
@@ -18,7 +18,7 @@ public class libros {
 	
 	
 	//CONSTRUCTORES
-	public libros (String a, boolean b, boolean c, boolean d, String e, String f, String g, LocalDate h) {
+	public Libro (String a, boolean b, boolean c, boolean d, String e, String f, String g, LocalDate h) {
 		this.cliente=a;
 		this.libro1=b;
 		this.libro2=c;
@@ -29,7 +29,7 @@ public class libros {
 		this.fecha=h;
 	}
 	
-	public libros () {
+	public Libro () {
 		this.cliente="";
 		this.libro1=true;
 		this.libro2=true;

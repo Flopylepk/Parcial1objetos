@@ -32,9 +32,6 @@ import javax.swing.JOptionPane;
 		return this.mascota;
 		}
 	public void setMascota() {
-		
-		
-			JOptionPane.showMessageDialog(null, "genial, vino en el dia del turno");
 			String nombre=validarCaracteres("ingrese el nombre del animal.");
 			String nombredueño=validarCaracteres("ingrese el nombre del dueño.");
 			String tipo=validarCaracteres("ingrese que animal es: ");
@@ -76,6 +73,15 @@ import javax.swing.JOptionPane;
 			this.tratamiento=this.tratamiento+"Enfermedad: "+b+" (nesesita tratamiento, vaya a la clinica veterinaria)"+"\n";
 		}
 		}
+	
+	//GETYSET FECHA
+	public LocalDate getFecha() {
+		return this.fecha;
+	}
+	
+	public void setFecha(LocalDate a) {
+		this.fecha=a;
+	}
 
 	//VALIDACIONES
 	public static int validarNumeros(String mensaje) {

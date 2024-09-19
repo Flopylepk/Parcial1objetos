@@ -9,7 +9,7 @@ public class main {
 		// TODO Auto-generated method stub
 
 		
-		libros primero =new libros();
+		Libro primero =new Libro();
 		String [] menu= {"Registrarse", "Prestamo","Ver prestamos", "Devolucion","Ver devoluciones", "Ver estado", "Salir"};
 		int opcion=0;
 		do {
