@@ -10,17 +10,20 @@ import javax.swing.JOptionPane;
 			private String mascota;
 			private String salud;
 			private String tratamiento;
+			private LocalDate fecha;
 			
 	//CONSTRUCTORES
-	public  Mascotas (String a, String b, String c) {
+	public  Mascotas (String a, String b, String c, LocalDate d) {
 		this.mascota=a;
 		this.salud=b;
 		this.tratamiento=c;
+		this.fecha=d;
 		}
 	public  Mascotas () {
 		this.mascota="";
 		this.salud="";
 		this.tratamiento="";
+		this.fecha= LocalDate.of(0, 0, 0);
 		}
 	
 	//GETYSET MASCOTA
@@ -29,13 +32,19 @@ import javax.swing.JOptionPane;
 		return this.mascota;
 		}
 	public void setMascota() {
-		String nombre=validarCaracteres("ingrese el nombre del animal.");
-		String nombredueño=validarCaracteres("ingrese el nombre del dueño.");
-		String tipo=validarCaracteres("ingrese que animal es: ");
-		int edad=validarNumeros("ingrese la edad del animal (en numero)");
-		int peso=validarNumeros("ingrese el peso del animal (en numero)");
-		LocalDate turno=LocalDate.of(validarNumeros("ingrese el año del turno (en numero"), validarNumeros("ingrese el mes del turno (en numero"), validarNumeros("ingrese el dia del turno (en numero"));
-		this.mascota="nombre de la mascota: "+nombre+"\n Nombre del dueño: "+nombredueño+"\n Tipo de animal: "+tipo+"\n Edad del animal: "+edad+"\n Peso: "+peso +"\n Turno: "+turno ;
+		
+		
+			JOptionPane.showMessageDialog(null, "genial, vino en el dia del turno");
+			String nombre=validarCaracteres("ingrese el nombre del animal.");
+			String nombredueño=validarCaracteres("ingrese el nombre del dueño.");
+			String tipo=validarCaracteres("ingrese que animal es: ");
+			int edad=validarNumeros("ingrese la edad del animal (en numero)");
+			int peso=validarNumeros("ingrese el peso del animal (en numero)");
+			int año=validarNumeros("ingrese el año del turno");
+			int mes=validarNumeros("ingrese el mes del turno");
+			int dia=validarNumeros("ingrese el dia del turno");
+			this.fecha= LocalDate.of(año, mes, dia);
+			this.mascota="nombre de la mascota: "+nombre+"\n Nombre del dueño: "+nombredueño+"\n Tipo de animal: "+tipo+"\n Edad del animal: "+edad+"\n Peso: "+peso +"\n Turno: "+fecha ;
 		}
 	
 	//GETYSET SALUD
@@ -43,8 +52,18 @@ import javax.swing.JOptionPane;
 		return this.salud;
 		}
 	public void setSalud(String a, int b) {
-		this.salud=this.salud+"Enfermedad: "+a+" Gravedad: "+b+"\n";
+		LocalDate hoy= LocalDate.now();
+		if (hoy.equals(fecha)) {
+			this.salud=this.salud+"Enfermedad: "+a+" Gravedad: "+b+"\n";
+		} else if (hoy.isBefore(fecha)) {
+			JOptionPane.showMessageDialog(null, "usted tiene que esperar a que sea el turno: "+fecha);
+		} else {
+			JOptionPane.showMessageDialog(null, "usted se paso de fecha, tiene que sacar otro turno, valla a resepcion");
 		}
+
+		}
+		
+		
 
 	//GETYSET TRATAMIENTO
 	public String getTratamiento(){

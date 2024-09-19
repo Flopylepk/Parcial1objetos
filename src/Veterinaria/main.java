@@ -11,7 +11,7 @@ public class main {
 		// 
 		
 		Mascotas peludo=new Mascotas();
-		String [] menu= {"Registrar mascota","Ver el registro", "Registrar su salud","Revisar su salud", "Revisar el tratamiento", "Salir" };
+		String [] menu= {"Sacar turno","Ver el registro", "Registrar su salud","Revisar su salud", "Revisar el tratamiento", "Salir" };
 		int opcion=0;
 		int valor=0;
 		String enfermedad="";
