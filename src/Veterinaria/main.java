@@ -10,7 +10,7 @@ public class main {
 	public static void main(String[] args) {
 		// 
 		
-		Mascotas peludo=new Mascotas();
+		Mascota peludo=new Mascota();
 		String [] menu= {"Sacar turno","Ver el registro", "Registrar su salud","Revisar su salud", "Revisar el tratamiento", "Salir" };
 		int opcion=0;
 		int valor=0;

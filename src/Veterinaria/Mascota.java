@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 import javax.swing.JOptionPane;
 
-	public class Mascotas {
+	public class Mascota {
 	
 		//ATRIBUTOS
 			private String mascota;
@@ -13,17 +13,17 @@ import javax.swing.JOptionPane;
 			private LocalDate fecha;
 			
 	//CONSTRUCTORES
-	public  Mascotas (String a, String b, String c, LocalDate d) {
+	public  Mascota (String a, String b, String c, LocalDate d) {
 		this.mascota=a;
 		this.salud=b;
 		this.tratamiento=c;
 		this.fecha=d;
 		}
-	public  Mascotas () {
+	public  Mascota () {
 		this.mascota="";
 		this.salud="";
 		this.tratamiento="";
-		this.fecha= LocalDate.of(0, 0, 0);
+		this.fecha= null;
 		}
 	
 	//GETYSET MASCOTA
